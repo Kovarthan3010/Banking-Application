@@ -3,13 +3,13 @@ package DAO;
 import java.util.List;
 
 public class User {
-    private long userId;
+    private String userId;
     private String userPassWord;
     private double userAccountBalance;
     private boolean isLoggedIn;
     private List<GiftCard> userGiftCardlist;
 
-    public User(long userId, String userPassWord, double userAccountBalance, boolean isLoggedIn, List<GiftCard> userGiftCardlist) {
+    public User(String userId, String userPassWord, double userAccountBalance, boolean isLoggedIn, List<GiftCard> userGiftCardlist) {
         this.userId = userId;
         this.userPassWord = userPassWord;
         this.userAccountBalance = userAccountBalance;
@@ -17,11 +17,11 @@ public class User {
         this.userGiftCardlist = userGiftCardlist;
     }
 
-    public long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
