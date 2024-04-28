@@ -60,7 +60,7 @@ public class UserLogin {
         passWord = sc.next();
         sc.nextLine();
         encryptedPassWord = passwordHandler.encryptor(passWord);
-        User user = new User(userName, encryptedPassWord, 1000, false, null);
+        User user = new User(userName, encryptedPassWord, 1000, false);
         UserList.userList.add(user);
         System.out.println("User account created successfully \n");
         login();

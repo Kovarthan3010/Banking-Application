@@ -1,5 +1,6 @@
 package DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -9,12 +10,12 @@ public class User {
     private boolean isLoggedIn;
     private List<GiftCard> userGiftCardlist;
 
-    public User(String userId, String userPassWord, double userAccountBalance, boolean isLoggedIn, List<GiftCard> userGiftCardlist) {
+    public User(String userId, String userPassWord, double userAccountBalance, boolean isLoggedIn) {
         this.userId = userId;
         this.userPassWord = userPassWord;
         this.userAccountBalance = userAccountBalance;
         this.isLoggedIn = isLoggedIn;
-        this.userGiftCardlist = userGiftCardlist;
+        userGiftCardlist = new ArrayList<>();
     }
 
     public String getUserId() {
@@ -53,7 +54,7 @@ public class User {
         return userGiftCardlist;
     }
 
-    public void setUserGiftCardlist(List<GiftCard> userGiftCardlist) {
-        this.userGiftCardlist = userGiftCardlist;
+    public void setUserGiftCardlist(GiftCard userGiftCard) {
+        userGiftCardlist.add(userGiftCard);
     }
 }

@@ -1,23 +1,22 @@
 package DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GiftCard {
     private long giftCardId;
     private long giftCardPin;
     private double giftCardBalance;
-    private int giftCardRedeemPoints;
     private boolean isgiftCardBlocked;
     private List<TransactionHistory> giftCardTransactions;
     private long rewardPoints;
 
-    public GiftCard(long giftCardId, long giftCardPin, double giftCardBalance, int giftCardRedeemPoints, boolean isgiftCardBlocked, List<TransactionHistory> giftCardTransactions, long rewardPoints) {
+    public GiftCard(long giftCardId, long giftCardPin, double giftCardBalance, boolean isgiftCardBlocked, long rewardPoints) {
         this.giftCardId = giftCardId;
         this.giftCardPin = giftCardPin;
         this.giftCardBalance = giftCardBalance;
-        this.giftCardRedeemPoints = giftCardRedeemPoints;
         this.isgiftCardBlocked = isgiftCardBlocked;
-        this.giftCardTransactions = giftCardTransactions;
+        this.giftCardTransactions = new ArrayList<>();
         this.rewardPoints = rewardPoints;
     }
 
@@ -45,14 +44,6 @@ public class GiftCard {
         this.giftCardBalance = giftCardBalance;
     }
 
-    public int getGiftCardRedeemPoints() {
-        return giftCardRedeemPoints;
-    }
-
-    public void setGiftCardRedeemPoints(int giftCardRedeemPoints) {
-        this.giftCardRedeemPoints = giftCardRedeemPoints;
-    }
-
     public boolean isIsgiftCardBlocked() {
         return isgiftCardBlocked;
     }
@@ -65,8 +56,8 @@ public class GiftCard {
         return giftCardTransactions;
     }
 
-    public void setGiftCardTransactions(List<TransactionHistory> giftCardTransactions) {
-        this.giftCardTransactions = giftCardTransactions;
+    public void setGiftCardTransactions(TransactionHistory transactionHistory) {
+        giftCardTransactions.add(transactionHistory);
     }
 
     public long getRewardPoints() {
