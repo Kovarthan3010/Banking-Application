@@ -11,6 +11,16 @@ public class GiftCard {
     private List<TransactionHistory> giftCardTransactions;
     private long rewardPoints;
 
+    public GiftCard(long giftCardId, long giftCardPin, double giftCardBalance, int giftCardRedeemPoints, boolean isgiftCardBlocked, List<TransactionHistory> giftCardTransactions, long rewardPoints) {
+        this.giftCardId = giftCardId;
+        this.giftCardPin = giftCardPin;
+        this.giftCardBalance = giftCardBalance;
+        this.giftCardRedeemPoints = giftCardRedeemPoints;
+        this.isgiftCardBlocked = isgiftCardBlocked;
+        this.giftCardTransactions = giftCardTransactions;
+        this.rewardPoints = rewardPoints;
+    }
+
     public long getGiftCardId() {
         return giftCardId;
     }
@@ -67,13 +77,4 @@ public class GiftCard {
         this.rewardPoints = rewardPoints;
     }
 
-    public GiftCard(long giftCardId, long giftCardPin, double giftCardBalance, int giftCardRedeemPoints, boolean isgiftCardBlocked, List<TransactionHistory> giftCardTransactions, long rewardPoints) {
-        this.giftCardId = giftCardId;
-        this.giftCardPin = giftCardPin;
-        this.giftCardBalance = giftCardBalance;
-        this.giftCardRedeemPoints = giftCardRedeemPoints;
-        this.isgiftCardBlocked = isgiftCardBlocked;
-        this.giftCardTransactions = giftCardTransactions;
-        this.rewardPoints = rewardPoints;
-    }
 }
