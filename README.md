@@ -1,9 +1,6 @@
 # Banking-Application
 Java based design problem . It is a banking application that performs some actions such as account login, gift card, purchase etc...
 
-# Banking-Application
-Java based design problem . It is a banking application that performs some actions such as account login, gift card, purchase etc...
-
 # Question
 The bank has initially three customers.There were  around eight modules . 
 1.Account Login
